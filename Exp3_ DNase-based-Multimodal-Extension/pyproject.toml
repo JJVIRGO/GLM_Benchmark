@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glm-benchmark-exp3-dnase"
+version = "0.1.0"
+description = "Experiment 3: DNase multimodal fusion for cross-cell-type TF binding prediction."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]

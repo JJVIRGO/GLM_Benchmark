@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glm-benchmark-exp1-finetune"
+version = "0.1.0"
+description = "Experiment 1 finetuning utilities for genome language model benchmarks."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]

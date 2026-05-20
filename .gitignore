@@ -1,3 +1,9 @@
+# Internal revision notes (not for publication)
+Exp1修缮.md
+Exp2修缮.md
+Exp3.md
+summary.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

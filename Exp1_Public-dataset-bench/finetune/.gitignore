@@ -1,0 +1,9 @@
+# Experiment runtime artifacts
+logs/
+outputs/
+output_0/
+*.log
+
+# Local heavyweight assets are expected outside Git history.
+GLM_weights/
+Data/

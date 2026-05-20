@@ -1,0 +1,44 @@
+name: glm_benchmark
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - pip
+  # bioinformatics CLI tools
+  - bedtools
+  - samtools
+  - meme
+  # core scientific stack
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - h5py
+  - pyarrow
+  - tqdm
+  - dask
+  - polars
+  - ipykernel
+  # GPU PyTorch (CUDA 12.1); remove pytorch-cuda and the nvidia channel for CPU-only
+  - pytorch>=2.1
+  - pytorch-cuda=12.1
+  - pip:
+      # transformers ecosystem (pinned for Exp1 compatibility)
+      - transformers==4.38.1
+      - accelerate>=0.27
+      - safetensors>=0.4
+      - tokenizers>=0.15
+      - einops>=0.7
+      # Exp2: motif interpretability
+      - logomaker
+      - modisco-lite
+      # Exp3: DNase signal processing
+      - pyBigWig
+      - biopython
+      - pybedtools
