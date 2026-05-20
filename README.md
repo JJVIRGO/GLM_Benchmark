@@ -2,7 +2,7 @@
 
 **Genomic Language Model Benchmark and Multimodal Extension**
 
-A reproducible benchmark suite accompanying the thesis *"Genomic Foundation Model Benchmark and Multi-modal Extension Study"* (Zhang Jiajing, 2025). The repository covers three self-contained experiments that evaluate DNA language models on public classification benchmarks, dissect their internal attention with motif interpretability tools, and extend them with DNase-seq chromatin accessibility signals for cross-cell-type TF binding prediction.
+A reproducible benchmark suite accompanying the graduation thesis "Benchmark and application of DNA sequence models". The repository covers three self-contained experiments that evaluate DNA language models on public classification benchmarks, dissect their internal attention with motif interpretability tools, and extend them with DNase-seq chromatin accessibility signals for cross-cell-type TF binding prediction.
 
 ---
 
@@ -23,14 +23,14 @@ A reproducible benchmark suite accompanying the thesis *"Genomic Foundation Mode
 All three experiments share a single conda environment. Create it from the top-level `environment.yml`:
 
 ```bash
-mamba env create -f environment.yml
+conda env create -f environment.yml
 conda activate glm_benchmark
 ```
 
 Then install each experiment's Python package in editable mode:
 
 ```bash
-pip install -e Exp1_Public-dataset-bench/finetune
+pip install -e Exp1_Public-dataset-bench
 pip install -e Exp2_Motif-Interpretability-Analysis
 pip install -e "Exp3_ DNase-based-Multimodal-Extension"
 ```
@@ -82,7 +82,7 @@ bash Exp1_Public-dataset-bench/finetune/scripts/run_matrix.sh \
   --data-root /path/to/data --model-root /path/to/model_files
 ```
 
-See [Exp1_Public-dataset-bench/finetune/](Exp1_Public-dataset-bench/finetune/) for notebooks and detailed documentation.
+See [Exp1_Public-dataset-bench/](Exp1_Public-dataset-bench/) for notebooks and detailed documentation.
 
 ---
 
@@ -167,13 +167,3 @@ bash "Exp3_ DNase-based-Multimodal-Extension/scripts/08_plot_auprc.sh"
 ```
 
 See [Exp3_ DNase-based-Multimodal-Extension/](<Exp3_ DNase-based-Multimodal-Extension/>) for notebooks demonstrating data preparation and fine-tuning with CTCF + GROVER.
-
----
-
-## Citation
-
-If you use this code or data, please cite the associated thesis:
-
-```
-Zhang Jiajing. Genomic Foundation Model Benchmark and Multi-modal Extension Study. 2025.
-```
