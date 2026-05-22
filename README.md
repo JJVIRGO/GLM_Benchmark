@@ -14,7 +14,7 @@ A reproducible benchmark suite accompanying the graduation thesis "Benchmark and
 |---|---|---|
 | [Exp1 — Public Benchmark](Exp1_Public-dataset-bench/) | Fine-tune five DNA LMs on 40 NT + GUE tasks; compare MCC across models and tasks | DNABERT-2, NT-v2-500M, GENA-LM, HyenaDNA, GROVER |
 | [Exp2 — Motif Interpretability](Exp2_Motif-Interpretability-Analysis/) | TFBS fine-tuning → attention enrichment on known FIMO motifs → attention-guided TF-MoDISco motif discovery | DNABERT-2, GENA-LM, GROVER, NT-v2-500M |
-| [Exp3 — DNase Multimodal](Exp3_%20DNase-based-Multimodal-Extension/) | Cross-cell-type TF binding prediction with sequence-only vs. sequence + DNase signal; evaluate AUPRC on held-out GM12878 | Basic CNN-LSTM, DNABERT-2, GROVER, GENA-LM, NT-v2-500M, HyenaDNA |
+| [Exp3 — DNase Multimodal](Exp3_DNase-based-Multimodal-Extension/) | Cross-cell-type TF binding prediction with sequence-only vs. sequence + DNase signal; evaluate AUPRC on held-out GM12878 | Basic CNN-LSTM, DNABERT-2, GROVER, GENA-LM, NT-v2-500M, HyenaDNA |
 
 ---
 
@@ -32,7 +32,7 @@ Then install each experiment's Python package in editable mode:
 ```bash
 pip install -e Exp1_Public-dataset-bench
 pip install -e Exp2_Motif-Interpretability-Analysis
-pip install -e "Exp3_ DNase-based-Multimodal-Extension"
+pip install -e Exp3_DNase-based-Multimodal-Extension
 ```
 
 > **CUDA note**: The environment file targets CUDA 12.1 PyTorch. On a CPU-only machine, remove `pytorch-cuda=12.1` and the `nvidia` channel before creating the environment.
@@ -140,7 +140,7 @@ See [Exp2_Motif-Interpretability-Analysis/](Exp2_Motif-Interpretability-Analysis
 
 ### Data Sources
 
-DNase-seq and ChIP-seq data used in Exp3 are documented in [Exp3_ DNase-based-Multimodal-Extension/data_sources.md](<Exp3_ DNase-based-Multimodal-Extension/data_sources.md>).
+DNase-seq and ChIP-seq data used in Exp3 are documented in [Exp3_DNase-based-Multimodal-Extension/data_sources.md](Exp3_DNase-based-Multimodal-Extension/data_sources.md).
 
 - **Training cell lines**: K562, HepG2, Lung
 - **Test cell line**: GM12878 (cross-cell-type generalization)
@@ -166,4 +166,4 @@ bash "Exp3_ DNase-based-Multimodal-Extension/scripts/07_extract_auprc.sh"
 bash "Exp3_ DNase-based-Multimodal-Extension/scripts/08_plot_auprc.sh"
 ```
 
-See [Exp3_ DNase-based-Multimodal-Extension/](<Exp3_ DNase-based-Multimodal-Extension/>) for notebooks demonstrating data preparation and fine-tuning with CTCF + GROVER.
+See [Exp3_DNase-based-Multimodal-Extension/](Exp3_DNase-based-Multimodal-Extension/) for notebooks demonstrating data preparation and fine-tuning with CTCF + GROVER.
